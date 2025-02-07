@@ -18,6 +18,7 @@ export default function Home() {
     const array = tasks.filter((_, index) => index !== deleteIndex);
     setTasks(array);
   };
+
   return (
     <Container className="max-w-md mx-auto py-8 pt-20">
       <header className="text-center mb-8">
@@ -31,10 +32,10 @@ export default function Home() {
             type="text"
             placeholder="Add a new task"
             value={taskName}
-            onChange={(e) => setTaskName(e.target.value)}
+            onChange={e => setTaskName(e.target.value)}
           />
           <button
-            className="flex ml-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all active:scale-110"
+            className="flex ml-2 px-4 py-2 bg-blue-700 text-white font-bold rounded-md hover:bg-blue-600 transition-all active:scale-110"
             onClick={() => addTask()}
           >
             Add
